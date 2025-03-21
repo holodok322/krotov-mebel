@@ -1,0 +1,13 @@
+.header {
+    margin: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #eeebe7;
+    padding: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    box-shadow: 
+    0px -10px 15px -5px #50423d7a,  /* Тень сверху */
+    0px 10px 15px -5px #50423d7a;   /* Тень снизу */
+    position: relative;  /* Обеспечивает правильное позиционирование теней */
+}

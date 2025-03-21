@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Poiret One';
+    src: url('./PoiretOne/PoiretOne.woff2') format('woff2'),
+         url('./PoiretOne/PoiretOne.woff') format('woff'),
+         url('./PoiretOne/PoiretOne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }

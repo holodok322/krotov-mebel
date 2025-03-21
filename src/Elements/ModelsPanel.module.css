@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+:root {
+  --body-color: #eeebe7;
+  --savanna-bg: #c9bbae;
+  --beach-bg: #eeebe7;
+  --arrow-fill: #c9bbae;
+  --body-font: "Montserrat", sans-serif;
+  --italic-font: "EB Garamond", serif;
+  --transition-duration: 0.6s;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e6decf;
+  padding: 0px 20px 90px;
+  position: relative;
+  transition: background-color var(--transition-duration) ease;
+  
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSideImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ и Edge */
+  user-select: none;
+}
+
+.main {
+  padding: 0 0 30px;
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+
+.mainTitle {
+  font-family: var(--italic-font);
+  font-size: 100px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  line-height: 1em;
+  /* Начальное состояние для анимации */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.mainContentTitle {
+  font-size: 2.5rem;
+  font-family: var(--italic-font);
+  font-style: italic;
+  margin-bottom: 14px;
+  /* Начальное состояние для анимации */
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: start;
+  padding-left: 36px;
+}
+.contentSubtitles {
+  display: flex;
+}
+
+.mainContentSubtitle {
+  line-height: 1.5;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  /* Начальное состояние для анимации */
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: start;
+  margin-left: 20px;
+}
+
+.mainContentSubtitle p {
+  font-size: 1.2rem;
+  margin: 4px 0px;
+}
+
+.mainContentSubtitle h {
+  font-size: 1.8rem;
+}
+
+.center {
+  display: flex;
+  margin-left: 120px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 160px;
+  /* Начальное состояние для анимации */
+  opacity: 0;
+  transform: scale(0.9);
+  padding: 50px;
+}
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+  width: 100%;
+  display: flex
+
+}
+
+.header {
+  margin: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #eeebe7;
+  padding: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  box-shadow: 
+  0px -10px 15px -5px #50423d7a,  /* Тень сверху */
+  0px 10px 15px -5px #50423d7a;   /* Тень снизу */
+  position: relative;  /* Обеспечивает правильное позиционирование теней */
+}
+
+.btn {
+  flex: 0.5;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  padding: 1.75rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+/* Data attribute backgrounds */
+:global([data-sld="0"]) .container {
+  background-color: var(--beach-bg);
+}
+
+:global([data-sld="1"]) .container {
+  background-color: var(--savanna-bg);
+}
+
+@media screen and (max-width: 930px) {
+  .leftSide {
+    text-align: center;
+  }
+  
+  .main {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .center {
+    margin-left: 0;
+    margin-bottom: 56px;
+  }
+  
+  .image {
+    width: 260px;
+    height: 390px;
+    padding: 0;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .buttonWrapper {
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 60px;
+  }
+  
+  .swiperButton + .swiperButton {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .image {
+    width: 220px;
+    height: 340px;
+    padding: 0;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .buttonWrapper {
+    padding: 0 20px;
+  }
+}
